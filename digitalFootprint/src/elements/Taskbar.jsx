@@ -1,19 +1,28 @@
 import './taskbar.css';
+import { CgFolder, CgEye, CgGlobeAlt } from "react-icons/cg";
+import { windowsConfig } from '../windowsConfig';
 
-import { CgFolder } from "react-icons/cg";
-import { CgEye } from "react-icons/cg";
-import { CgGlobeAlt } from "react-icons/cg";
+const iconMap = {
+    CgFolder,
+    CgEye,
+    CgGlobeAlt
+};
 
-import Window from './Window';
-
-
-
-function Taskbar() {
+function Taskbar({ onOpenWindow }) {
     return (
         <div className="taskbar">
-            <div className="taskbar-item"><CgFolder /></div>
-            <div className="taskbar-item"><CgEye /></div>
-            <div className="taskbar-item"><CgGlobeAlt /></div>
+            {windowsConfig.map((config) => {
+                const Icon = iconMap[config.icon];
+                return (
+                    <div 
+                        key={config.id} 
+                        className="taskbar-item" 
+                        onClick={() => onOpenWindow(config)}
+                    >
+                        <Icon />
+                    </div>
+                );
+            })}
         </div>
     );
 }

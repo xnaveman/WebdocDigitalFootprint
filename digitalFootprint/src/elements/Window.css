@@ -1,28 +1,58 @@
 .windowContainer {
-    position: absolute;
-    top: 50px;
-    left: 50px;
+    position: fixed;
     width: 600px;
     height: 400px;
-    border: 2px solid #000;
+    border: 1px solid #1f1f1f;
     background-color: #fff;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    resize: both;
-    overflow: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .windowHeader {
-    background-color: #333;
+    background-color: #2c2c2c;
     color: #fff;
-    padding: 10px;
+    padding: 0;
     cursor: move;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 32px;
 }
 
 .windowTitle {
-    font-size: 16px;
+    font-size: 14px;
+    padding-left: 12px;
+    font-weight: 400;
+}
+
+.windowControls {
+    display: flex;
+    height: 100%;
+}
+
+.windowControls button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    width: 46px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.15s;
+}
+
+.windowControls .minimize:hover {
+    background-color: #404040;
+}
+
+.windowControls .maximize:hover {
+    background-color: #404040;
+}
+
+.windowControls .close:hover {
+    background-color: #e81123;
 }
 
 .windowClose {
