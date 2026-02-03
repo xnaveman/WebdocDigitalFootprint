@@ -1,4 +1,4 @@
-import './taskbar.css';
+import './Taskbar.css';
 import { CgFolder, CgEye, CgGlobeAlt, CgBell, CgLogOff, CgBatteryFull } from "react-icons/cg";
 import { windowsConfig } from '../windowsConfig';
 
