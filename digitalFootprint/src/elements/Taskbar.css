@@ -1,48 +1,87 @@
 .taskbar {
     position: fixed;
-
-    bottom: 3.5vh;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 50px;
-    background-color: #e6dbdb;
-    color: rgb(0, 0, 0);
+    height: 80px;
+    background: linear-gradient(to bottom, #2d2d2d 0%, #252525 100%);
+    color: #ffffff;
     display: flex;
     align-items: center;
-    padding: 0 10px;
-    border-radius: 8px;
-    width: fit-content;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-content: space-between;
+    padding: 0 8px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid #1a1a1a;
+    padding-left: 14px;
+    padding-right: 16px;
+}
+.taskbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
-.taskbar-item {
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    margin: 10px;
+.taskbar-statuses {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-right: 8px;
+    margin-right: 14px;
+}
+
+.taskbar-status {
+    font-size: 28px;
+    color: #e0e0e0;
+    margin: 0 4px;
     cursor: pointer;
-    border: 1px solid #e6dbdb;
-    padding: 5px 5px;
+    padding: 8px 12px;
     border-radius: 4px;
-    width: 30px;
-    height: 30px;
+    min-width: 48px;
+    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.taskbar-status:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.taskbar-item {
+    font-size: 28px;
+    color: #e0e0e0;
+    margin: 0 4px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    min-width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    position: relative;
 }
 
 .taskbar-item:hover {
-    background-color: #555;
-    color: white;
-    border-color: #555;
-    transition: all 0.2s;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
 }
 
-.taskbar-item.active::after {
+.taskbar-item:active {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.taskbar-item.active::before {
     content: '';
-    display: block;
-    width: 6px;
-    height: 6px;
-    background-color: #555;
-    border-radius: 50%;
-    margin: 5px auto 0;
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 3px;
+    background-color: #4a90d9;
+    border-radius: 2px;
 }
