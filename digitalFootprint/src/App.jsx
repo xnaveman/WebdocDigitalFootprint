@@ -2,33 +2,22 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Background from '../src/assets/wallpapers/blue-dark.png'
 
 import Taskbar from './elements/taskbar.jsx';
+import Shortcut from './elements/Shortcut.jsx';
 
 function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <img src={Background} alt="Background" className='wallpaper' style={{ userSelect: 'none' }} />
+      <div className="desktop">
+        <div className="shortcuts">
+          <Shortcut icon="../src/assets/icons/bin-icon.png" label="Corbeille" />
+          <Shortcut icon="../src/assets/icons/pc-icon.png" label="Ce Pc" />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button>
-          count is 0
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
       <Taskbar />
     </>
   )

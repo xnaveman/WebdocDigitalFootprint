@@ -1,0 +1,34 @@
+.shortcut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    margin: 25px;
+    cursor: pointer;
+}
+
+.shortcut-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.shortcut-label {
+    font-size: 0.9rem;
+    text-align: center;
+    word-wrap: break-word;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.shortcut-label:hover {
+    text-decoration: underline;
+}
+.shortcut-icon:hover {
+    transform: scale(1.1);
+    transition: transform;
+}
+
+.shortcut-icon:hover + .shortcut-label {
+    text-decoration: underline;
+}
