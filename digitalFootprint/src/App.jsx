@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Background from '../src/assets/wallpapers/blue-dark.png'
 
-import Taskbar from './elements/taskbar.jsx';
+import Taskbar from './elements/Taskbar.jsx';
 import Shortcut from './elements/Shortcut.jsx';
 import Window from './elements/Window.jsx';
 import { windowsConfig } from './windowsConfig.js'
