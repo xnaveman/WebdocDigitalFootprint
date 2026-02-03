@@ -1,0 +1,24 @@
+.taskbar {
+    position: fixed;
+    
+    bottom: 3.5vh;
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 8px;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.taskbar-item {
+    margin-right: 15px;
+    cursor: pointer;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
