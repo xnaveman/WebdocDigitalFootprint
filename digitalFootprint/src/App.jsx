@@ -20,6 +20,7 @@ function App() {
     setWindows(windows.filter(win => win.instanceId !== instanceId));
   };
 
+  
   return (
     <>
       <img src={Background} alt="Background" className='wallpaper' style={{ userSelect: 'none' }} />
