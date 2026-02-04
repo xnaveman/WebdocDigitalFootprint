@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 
-import Taskbar from './elements/Taskbar.jsx'
+import Taskbar from './elements/taskbar.jsx'
 import Shortcut from './elements/Shortcut.jsx'
 import Window from './elements/Window.jsx'
 import { windowsConfig } from './windowsConfig.js'
