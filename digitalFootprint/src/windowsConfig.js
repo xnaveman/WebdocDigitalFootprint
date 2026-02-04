@@ -23,7 +23,7 @@ export const windowsConfig = [
         title: 'Navigation',
         content: {
             type: 'html',
-            data: '<h1>Navigateur Web</h1></br><p>Test blabla ...</p>'
+            data: '<form action="https://www.google.com/search" method="get" target="_blank" style="width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center;">\n<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo" style="width:200px; margin-bottom:20px;" />\n<input type="text" name="q" placeholder="Search Google" style="width:80%; padding:10px; font-size:16px;" />\n<button type="submit" style="margin-top:10px; padding:10px 20px; font-size:16px;">Search</button>\n</form>'
         }
     },
     {
@@ -43,6 +43,6 @@ export const windowsConfig = [
             type: 'video',
             data: '/assets/videos/masterclass.mp4'
         }
-    }
+    },
 
 ];

@@ -1,8 +1,16 @@
 import './Window.css';
 import { useState } from 'react';
 
+let windowCounter = 0;
+const WINDOW_OFFSET = 30;
+
 function Window({ config, onClose }) {
-    const [position, setPosition] = useState({ x: 100, y: 100 });
+    const [position, setPosition] = useState({ 
+        x: 100 + (windowCounter * WINDOW_OFFSET) % 500,
+        y: 100 + (windowCounter * WINDOW_OFFSET) % 500
+    });
+    windowCounter++;
+
     const [isDragging, setIsDragging] = useState(false);
     const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
 
