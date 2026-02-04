@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import './App.css'
 
+import docIcon from '/assets/icons/doc-icon.png'
+import settingsIcon from '/assets/icons/settings-icon.png'
+import imageIcon from '/assets/icons/image-icon.png'
+import binIcon from '/assets/icons/bin-icon.png'
+
 import Taskbar from './elements/Taskbar.jsx'
 import Shortcut from './elements/Shortcut.jsx'
 import Window from './elements/Window.jsx'
@@ -23,9 +28,10 @@ function App() {
       <img src="/assets/wallpapers/blue-dark.png" alt="Background" className='wallpaper' style={{ userSelect: 'none' }} />
       <div className="desktop">
         <div className="shortcuts">
-          <Shortcut icon="/assets/icons/bin-icon.png" label="Corbeille" />
-          <Shortcut icon="/assets/icons/pc-icon.png" label="Ce Pc" />
-          <Shortcut icon="/assets/icons/rickastley.webp" label="Rick ?" onClick={() => openWindow(windowsConfig[3])} />
+          <Shortcut icon={binIcon} label="Corbeille" />
+          <Shortcut icon={settingsIcon} label="Ce Pc" />
+          <Shortcut icon={docIcon} label="Rick ?" onClick={() => openWindow(windowsConfig[3])} />
+          <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
         </div>
       </div>
 

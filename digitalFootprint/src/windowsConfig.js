@@ -34,6 +34,15 @@ export const windowsConfig = [
             type: 'video',
             data: '/assets/videos/rickvideo.mp4'
         }
+    },
+    {
+        id: 'welovehim',
+        icon: 'CgFolder',
+        title: 'We love CA',
+        content: {
+            type: 'video',
+            data: '/assets/videos/masterclass.mp4'
+        }
     }
 
 ];
