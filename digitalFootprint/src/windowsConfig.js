@@ -14,7 +14,7 @@ export const windowsConfig = [
         title: 'Aperçu',
         content: {
             type: 'image',
-            data: '../src/assets/background.jpeg'
+            data: '/assets/background.jpeg'
         }
     },
     {
@@ -32,7 +32,7 @@ export const windowsConfig = [
         title: 'Never Gonna Give You Up',
         content: {
             type: 'video',
-            data: '../src/assets/videos/rickvideo.mp4'
+            data: '/assets/videos/rickvideo.mp4'
         }
     }
 
