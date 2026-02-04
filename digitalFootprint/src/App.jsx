@@ -26,9 +26,9 @@ function App() {
       <img src={Background} alt="Background" className='wallpaper' style={{ userSelect: 'none' }} />
       <div className="desktop">
         <div className="shortcuts">
-          <Shortcut icon="/assets/icons/bin-icon.png" label="Corbeille" />
-          <Shortcut icon="/assets/icons/pc-icon.png" label="Ce Pc" />
-          <Shortcut icon="/assets/icons/rickastley.webp" label="Rick ?" onClick={() => openWindow(windowsConfig[3])} />
+          <Shortcut icon="./assets/icons/bin-icon.png" label="Corbeille" />
+          <Shortcut icon="./assets/icons/pc-icon.png" label="Ce Pc" />
+          <Shortcut icon="./assets/icons/rickastley.webp" label="Rick ?" onClick={() => openWindow(windowsConfig[3])} />
         </div>
       </div>
 
