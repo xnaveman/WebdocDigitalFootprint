@@ -5,10 +5,26 @@ let windowCounter = 0;
 const WINDOW_OFFSET = 30;
 
 function Window({ config, onClose }) {
-    const [position, setPosition] = useState({ 
-        x: 300 + (windowCounter * WINDOW_OFFSET) % 500,
-        y: 150 + (windowCounter * WINDOW_OFFSET) % 250
-    });
+    const getInitialPosition = () => {
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        const windowWidth = screenWidth < 768 ? screenWidth * 0.9 : (screenWidth < 1200 ? 650 : 800);
+        const windowHeight = screenHeight < 768 ? screenHeight * 0.7 : (screenHeight < 1200 ? 550 : 650);
+
+        const baseX = (screenWidth - windowWidth) / 3.5;
+        const baseY = (screenHeight - windowHeight) / 5;
+
+        const offsetX = (windowCounter * WINDOW_OFFSET) % Math.min(screenWidth / 4, screenWidth - windowWidth - 20);
+        const offsetY = (windowCounter * WINDOW_OFFSET) % Math.min(screenHeight / 4, screenHeight - windowHeight - 100);
+
+        return {
+            x: Math.min(baseX + offsetX, screenWidth - windowWidth - 10),
+            y: Math.min(baseY + offsetY, screenHeight - windowHeight - 80)
+        };
+    };
+
+    const [position, setPosition] = useState(getInitialPosition());
     windowCounter++;
 
     const [isDragging, setIsDragging] = useState(false);
@@ -45,8 +61,8 @@ function Window({ config, onClose }) {
     };
 
     return (
-        <div 
-            className="windowContainer" 
+        <div
+            className="windowContainer"
             style={{ left: position.x, top: position.y }}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}

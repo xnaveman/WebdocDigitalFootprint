@@ -1,7 +1,9 @@
 .windowContainer {
     position: fixed;
-    width: 800px;
-    height: 650px;
+    width: 90vw;
+    height: 70vh;
+    max-width: 500px;
+    max-height: 450px;
     border: 1px solid #1f1f1f;
     background-color: #fff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -10,21 +12,65 @@
     overflow: hidden;
 }
 
+@media (min-width: 768px) {
+    .windowContainer {
+        width: 650px;
+        height: 550px;
+        max-width: 650px;
+        max-height: 550px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .windowContainer {
+        width: 800px;
+        height: 650px;
+        max-width: 800px;
+        max-height: 650px;
+    }
+}
+
 .windowHeader {
     background-color: #2c2c2c;
     color: #fff;
     padding: 0;
-    cursor: move;
+    cursor: grab;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
+    height: 42px;
+}
+
+@media (min-width: 768px) {
+    .windowHeader {
+        height: 42px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .windowHeader {
+        height: 60px;
+    }
 }
 
 .windowTitle {
-    font-size: 14px;
-    padding-left: 12px;
+    font-size: 13px;
+    padding-left: 10px;
     font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .windowTitle {
+        font-size: 14px;
+        padding-left: 12px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .windowTitle {
+        font-size: 18px;
+        padding-left: 14px;
+    }
 }
 
 .windowControls {
@@ -36,11 +82,25 @@
     background-color: transparent;
     border: none;
     color: #fff;
-    width: 46px;
+    width: 40px;
     height: 100%;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 11px;
     transition: background-color 0.15s;
+}
+
+@media (min-width: 768px) {
+    .windowControls button {
+        width: 46px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .windowControls button {
+        width: 60px;
+        font-size: 14px;
+    }
 }
 
 .windowControls .minimize:hover {
@@ -73,5 +133,14 @@
 }
 
 .windowContent {
-    padding: 10px;
+    padding: 8px;
+    height: calc(100% - 36px);
+    overflow: auto;
+}
+
+@media (min-width: 768px) {
+    .windowContent {
+        padding: 10px;
+        height: calc(100% - 40px);
+    }
 }

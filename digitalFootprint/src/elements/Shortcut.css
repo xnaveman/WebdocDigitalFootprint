@@ -2,23 +2,54 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90px;
-    margin: 20px;
+    width: 70px;
+    margin: 10px;
     cursor: pointer;
 }
 
 .shortcut-icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 10px;
+    width: 2.2rem;
+    height: 2.2rem;
 }
 
 .shortcut-label {
-    font-size: 1rem;
+    font-size: 0.85rem;
     text-align: center;
     word-wrap: break-word;
     font-family: Arial, sans-serif;
     color: white;
+}
+
+@media (min-width: 768px) {
+    .shortcut {
+        width: 80px;
+        margin: 15px;
+    }
+    
+    .shortcut-icon {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    
+    .shortcut-label {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .shortcut {
+        width: 90px;
+        margin: 20px;
+    }
+    
+    .shortcut-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .shortcut-label {
+        font-size: 1rem;
+    }
 }
 
 .shortcut-label:hover {
