@@ -32,7 +32,7 @@ function App() {
         <div className="shortcuts">
 
           <Shortcut icon={binIcon} label="Corbeille" />
-          <Shortcut icon={settingsIcon} label="Ce Pc" />
+          <Shortcut icon={settingsIcon} label="Paramètres" />
 
           <Shortcut icon={docIcon} label="RÉCAP.txt" onClick={() => openWindow(windowsConfig[5])} />
 
@@ -41,14 +41,14 @@ function App() {
           <Shortcut icon={folderIcon} label="Affaire 3" onClick={() => openWindow(windowsConfig[8])} />
           <Shortcut icon={folderIcon} label="Affaire 4" onClick={() => openWindow(windowsConfig[9])} />
 
-          <Shortcut icon={videoIcon} label="JURISTE.mp4" onClick={() => openWindow(windowsConfig[3])} />
-          <Shortcut icon={docIcon} label="Transcription.txt" />
+          <Shortcut icon={videoIcon} label="JURISTE1.mp4" onClick={() => openWindow(windowsConfig[3])} />
+          <Shortcut icon={docIcon} label="Transcription1.txt" />
 
-          <Shortcut icon={videoIcon} label="JURISTE.mp4" onClick={() => openWindow(windowsConfig[3])} />
-          <Shortcut icon={docIcon} label="Transcription.txt" />
+          <Shortcut icon={videoIcon} label="JURISTE2.mp4" onClick={() => openWindow(windowsConfig[3])} />
+          <Shortcut icon={docIcon} label="Transcription2.txt" />
 
           <Shortcut icon={videoIcon} label="BOUICHE.mp4" onClick={() => openWindow(windowsConfig[3])} />
-          <Shortcut icon={docIcon} label="Transcription.txt" />
+          <Shortcut icon={docIcon} label="Transcription3.txt" />
 
           <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
           <Shortcut icon={videoIcon} label="Rick ?" onClick={() => openWindow(windowsConfig[3])} />

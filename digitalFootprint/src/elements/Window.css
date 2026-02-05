@@ -134,13 +134,34 @@
 
 .windowContent {
     padding: 8px;
-    height: calc(100% - 36px);
+    height: calc(100% - 42px);
     overflow: auto;
+}
+
+.windowContent-media {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+.window-media {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 @media (min-width: 768px) {
     .windowContent {
         padding: 10px;
-        height: calc(100% - 40px);
+        height: calc(100% - 42px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .windowContent {
+        height: calc(100% - 64px);
     }
 }

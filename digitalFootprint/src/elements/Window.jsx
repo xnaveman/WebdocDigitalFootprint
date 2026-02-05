@@ -50,9 +50,9 @@ function Window({ config, onClose }) {
             case 'text':
                 return <p>{config.content.data}</p>;
             case 'image':
-                return <img src={config.content.data} alt={config.title} style={{ maxWidth: '100%' }} />;
+                return <img src={config.content.data} alt={config.title} className="window-media" />;
             case 'video':
-                return <video src={config.content.data} controls autoPlay style={{ maxWidth: '100%' }} />;
+                return <video src={config.content.data} controls autoPlay className="window-media" />;
             case 'html':
                 return <div dangerouslySetInnerHTML={{ __html: config.content.data }} />;
             default:
@@ -75,7 +75,7 @@ function Window({ config, onClose }) {
                     <button className="close" onClick={onClose}>X</button>
                 </div>
             </div>
-            <div className="windowContent">
+            <div className={`windowContent ${config.content.type === 'image' || config.content.type === 'video' ? 'windowContent-media' : ''}`}>
                 {renderContent()}
             </div>
         </div>
