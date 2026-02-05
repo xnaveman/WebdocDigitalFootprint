@@ -32,6 +32,18 @@ function App() {
           <Shortcut icon={settingsIcon} label="Ce Pc" />
           <Shortcut icon={docIcon} label="Rick ?" onClick={() => openWindow(windowsConfig[3])} />
           <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
+          <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
+          <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
+          <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
+          <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
+          <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
+          <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
+          <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
+          <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
+          <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
+          <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
+          <Shortcut icon={docIcon} label="Who this" onClick={() => openWindow(windowsConfig[4])} />
+
         </div>
       </div>
 

@@ -6,8 +6,8 @@ const WINDOW_OFFSET = 30;
 
 function Window({ config, onClose }) {
     const [position, setPosition] = useState({ 
-        x: 100 + (windowCounter * WINDOW_OFFSET) % 500,
-        y: 100 + (windowCounter * WINDOW_OFFSET) % 500
+        x: 300 + (windowCounter * WINDOW_OFFSET) % 500,
+        y: 150 + (windowCounter * WINDOW_OFFSET) % 250
     });
     windowCounter++;
 
