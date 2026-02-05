@@ -2,10 +2,10 @@ export const windowsConfig = [
     {
         id: 'folder',
         icon: 'CgFolder',
-        title: 'Documents disponibles',
+        title: 'Fonctionnement du bureau',
         content: {
-            type: 'text',
-            data: 'Liste des documents disponibles dans les dossiers.'
+            type: 'html',
+            data: '<h1>Fonctionnement du bureau</h1>\n    <p>Bienvenue sur le bureau. Voici un guide pour comprendre comment naviguer et utiliser les documents à votre disposition :</p>\n <li>Cliquez deux fois sur une icône pour ouvrir le fichier.</li>\n    </ul>\n    <h2>Documents disponibles</h2>\n    <ul>\n        <li><strong>RECAP :</strong> Accédez au récapitulatif des dossiers d\'affaires.</li>\n <li><strong>Dossiers d\'ffaires :</strong> Éléments, témoignages, explications des experts sont disponibles dans ces dossiers pour analyser les affaires.</li>\n        <li> Vous pouvez tous les documents et fichiers à votre disposition sur ce bureau et internet. </li>\n   </ul>\n    <h2>Conseils d\'utilisation</h2>\n    <ul>\n        <li>Assurez-vous de naviguer dans un environnement sécurisé.</li>\n <li>Ne partagez pas d\'informations sensibles.</li> \n </ul>\n <h3 style="color: red;">Veuillez investiguer les dossiers d\'affaires afin de vous familiariser avec celles-ci avant de soumettre votre rapport final.</h3>'
         }
     },
     {
@@ -94,5 +94,26 @@ export const windowsConfig = [
             data: '<h2>Profil : Julie, 29 ans, Graphiste et Consultante Marketing.</h2>\n<p><strong>Contexte :</strong> Elle gère tout son business en ligne. Inscrite sur des dizaines de plateformes (banques en ligne, outils de gestion, sites de mission), elle privilégie la rapidité et l\'efficacité à la sécurité.</p>\n<h3>Réalité OSINT (Ce qui s\'affiche à l\'écran) :</h3>\n<ul>\n<li><strong>Source :</strong> Violation de données (Data Breach) d\'un vieux site peu sécurisé (ex: un forum ou un petit site e-commerce).<br><strong>Résultat :</strong> Son mot de passe habituel (\"JulieDesign88\") est visible en clair.</li>\n<li><strong>Source :</strong> Attaque par \"Credential Stuffing\" (Bourrage d\'identifiants).<br><strong>Résultat :</strong> Accès à ses comptes pro et bancaires.</li>\n</ul>'
         }
     }
+    ,
+    {
+        id: 'rapport1',
+        icon: 'CgFolder',
+        title: 'Soummettre votre rapport final ?',
+        content: {
+            type: 'html',
+            data: '<div style=" padding: 20px;">\n    <h1>Êtes-vous prêt à soumettre votre rapport final ?</h1>\n    <p>Commencez uniquement après avoir pris en compte les différentes affaires.</p> <ul><li>Vous avez observer et analysé chaque affaire.</li><li>Vous avez écouté les différents témoignages des victimes.</li><li>Vous avez pris en compte les conseils des experts et des juristes.</li></ul>\n</div>    <div style="text-align: center;"><button onclick="closeWindow(\'rapport1\'); openWindow(windowsConfig[11]);" style="padding: 10px 20px; font-size: 16px; background-color: #ce3639; color: white; border: none; border-radius: 5px; cursor: pointer;">Démarrer le rapport</button>\n</div>'
+        }
+    }
+    ,
+    {
+        id: 'rapport2',
+        icon: 'CgFolder',
+        title: 'Rapport Final',
+        content: {
+            type: 'html',
+            data: '',
+        }
+    }
+
 
 ];
