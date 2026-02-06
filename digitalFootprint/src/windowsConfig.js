@@ -145,10 +145,19 @@ export const windowsConfig = [
         titleKey: 'titleJuriste2',
         content: {
             type: 'html',
-            data: '<iframe width="100%" height="400" src="https://www.youtube.com/embed/uiL7evyg__g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+            data: '<iframe width="100%" height="400" src="https://www.youtube.com/embed/i_YaOLAuRZc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
         }
     },
-
+    {
+        id: 'pascault2',
+        icon: 'CgFolder',
+        titleKey: 'titleJuriste2Part2',
+        content: {
+            type: 'html',
+            data: '<iframe width="100%" height="400" src="https://www.youtube.com/embed/4-jJ-FFp4B4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        }
+    },
+    
 ];
 
 // Template generators for translated content

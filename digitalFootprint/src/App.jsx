@@ -57,6 +57,9 @@ function App() {
           <Shortcut icon={videoIcon} label={t('juriste1')} onDoubleClick={() => openWindow(windowsConfig[14])} />
 
           <Shortcut icon={videoIcon} label={t('juriste2')} onDoubleClick={() => openWindow(windowsConfig[15])} />
+          <Shortcut icon={videoIcon} label={t('juriste2Part2')} onDoubleClick={() => openWindow(windowsConfig[16])} />
+
+
 
           <Shortcut icon={videoIcon} label={t('expertCyber')} onDoubleClick={() => openWindow(windowsConfig[12])} />
 
