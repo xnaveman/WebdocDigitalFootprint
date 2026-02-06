@@ -1,16 +1,100 @@
-# React + Vite
+# Digital Footprint - Projet de sensibilisation à l'empreinte numérique
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projet interactif de sensibilisation aux dangers de l'empreinte numérique, développé avec React et Vite.
 
-Currently, two official plugins are available:
+## 📋 Prérequis
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Avant de commencer, assurez-vous d'avoir installé :
+- [Node.js](https://nodejs.org/) (version 16 ou supérieure)
+- npm (inclus avec Node.js) ou yarn
 
-## React Compiler
+## 🚀 Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Cloner le projet** (si ce n'est pas déjà fait)
+   ```bash
+   git clone <url-du-repo>
+   cd digitalFootprint
+   ```
 
-## Expanding the ESLint configuration
+2. **Installer les dépendances**
+   ```bash
+   npm install
+   ```
+   ou avec yarn :
+   ```bash
+   yarn install
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💻 Lancement du projet
+
+### Mode développement
+
+Pour lancer le serveur de développement avec rechargement automatique :
+
+```bash
+npm run dev
+```
+
+ou avec yarn :
+
+```bash
+yarn dev
+```
+
+Le site sera accessible à l'adresse : **http://localhost:5173**
+
+### Mode production
+
+Pour construire le projet pour la production :
+
+```bash
+npm run build
+```
+
+Pour prévisualiser la version de production :
+
+```bash
+npm run preview
+```
+
+## 🛠️ Scripts disponibles
+
+- `npm run dev` : Lance le serveur de développement
+- `npm run build` : Crée une version optimisée pour la production
+- `npm run preview` : Prévisualise la version de production
+- `npm run lint` : Vérifie le code avec ESLint
+
+## 📦 Technologies utilisées
+
+- **React 19** - Bibliothèque UI
+- **Vite** - Outil de build et serveur de développement
+- **React Icons** - Bibliothèque d'icônes
+- **React Quiz Component** - Composant de quiz interactif
+
+## 📂 Structure du projet
+
+```
+digitalFootprint/
+├── public/           # Fichiers statiques
+├── src/
+│   ├── elements/     # Composants UI (Quiz, Settings, Window, etc.)
+│   ├── contexts/     # Contextes React (LanguageContext)
+│   ├── windows/      # Configurations des fenêtres
+│   ├── assets/       # Images et ressources
+│   ├── App.jsx       # Composant principal
+│   └── main.jsx      # Point d'entrée
+└── data/             # Données et contenus
+
+```
+
+## 🌐 Langues disponibles
+
+Le site est disponible en :
+- 🇫🇷 Français
+- 🇬🇧 English
+
+## 📝 Notes
+
+- Le projet utilise Vite pour un rechargement ultra-rapide en développement
+- Les vidéos et contenus sont intégrés via iframe YouTube
+- Le site simule un environnement de bureau interactif
