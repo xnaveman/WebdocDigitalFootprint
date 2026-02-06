@@ -1,10 +1,16 @@
 import './Window.css';
 import { useState } from 'react';
+import Settings from './Settings';
+import Quiz from './Quiz';
+import { useLanguage } from '../contexts/LanguageContext';
+import { getTranslatedContent } from '../windowsConfig';
 
 let windowCounter = 0;
 const WINDOW_OFFSET = 30;
 
 function Window({ config, onClose }) {
+    const { t } = useLanguage();
+    
     const getInitialPosition = () => {
         const screenWidth = window.innerWidth;
         const screenHeight = window.innerHeight;
@@ -45,16 +51,35 @@ function Window({ config, onClose }) {
         setIsDragging(false);
     };
 
+    // Get the translated title
+    const getTitle = () => {
+        if (config.titleKey) {
+            return t(config.titleKey);
+        }
+        return config.title || '';
+    };
+
     const renderContent = () => {
         switch (config.content.type) {
             case 'text':
                 return <p>{config.content.data}</p>;
             case 'image':
-                return <img src={config.content.data} alt={config.title} className="window-media" />;
+                return <img src={config.content.data} alt={getTitle()} className="window-media" />;
             case 'video':
                 return <video src={config.content.data} controls autoPlay className="window-media" />;
             case 'html':
                 return <div dangerouslySetInnerHTML={{ __html: config.content.data }} />;
+            case 'translated':
+                const translatedHtml = getTranslatedContent(config.content.template, t, config.content.video);
+                return <div dangerouslySetInnerHTML={{ __html: translatedHtml }} />;
+            case 'component':
+                if (config.content.data === 'Settings') {
+                    return <Settings />;
+                }
+                if (config.content.data === 'Quiz') {
+                    return <Quiz />;
+                }
+                return null;
             default:
                 return <p>{config.content.data}</p>;
         }
@@ -68,7 +93,7 @@ function Window({ config, onClose }) {
             onMouseUp={handleMouseUp}
         >
             <div className="windowHeader" onMouseDown={handleMouseDown}>
-                <div className="windowTitle">{config.title}</div>
+                <div className="windowTitle">{getTitle()}</div>
                 <div className="windowControls">
                     <button className="minimize">_</button>
                     <button className="maximize" onClick={() => {}}>[ ]</button>
@@ -77,6 +102,7 @@ function Window({ config, onClose }) {
             </div>
             <div className={`windowContent ${config.content.type === 'image' || config.content.type === 'video' ? 'windowContent-media' : ''}`}>
                 {renderContent()}
+                {isDragging && <div className="drag-overlay" />}
             </div>
         </div>
     );

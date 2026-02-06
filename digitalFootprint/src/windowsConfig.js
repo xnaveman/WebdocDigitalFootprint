@@ -1,17 +1,18 @@
+// Base config - titles use translation keys
 export const windowsConfig = [
     {
         id: 'folder',
         icon: 'CgFolder',
-        title: 'Fonctionnement du bureau',
+        titleKey: 'titleFonctionnement',
         content: {
-            type: 'html',
-            data: '<h1>Fonctionnement du bureau</h1>\n    <p>Bienvenue sur le bureau. Voici un guide pour comprendre comment naviguer et utiliser les documents à votre disposition :</p>\n <li>Cliquez deux fois sur une icône pour ouvrir le fichier.</li>\n    </ul>\n    <h2>Documents disponibles</h2>\n    <ul>\n        <li><strong>RECAP :</strong> Accédez au récapitulatif des dossiers d\'affaires.</li>\n <li><strong>Dossiers d\'ffaires :</strong> Éléments, témoignages, explications des experts sont disponibles dans ces dossiers pour analyser les affaires.</li>\n        <li> Vous pouvez tous les documents et fichiers à votre disposition sur ce bureau et internet. </li>\n   </ul>\n    <h2>Conseils d\'utilisation</h2>\n    <ul>\n        <li>Assurez-vous de naviguer dans un environnement sécurisé.</li>\n <li>Ne partagez pas d\'informations sensibles.</li> \n </ul>\n <h3 style="color: red;">Veuillez investiguer les dossiers d\'affaires afin de vous familiariser avec celles-ci avant de soumettre votre rapport final.</h3>'
+            type: 'translated',
+            template: 'fonctionnement'
         }
     },
     {
         id: 'eye',
         icon: 'CgEye',
-        title: 'Aperçu',
+        titleKey: 'titleApercu',
         content: {
             type: 'image',
             data: '/assets/background.jpeg'
@@ -20,18 +21,16 @@ export const windowsConfig = [
     {
         id: 'globe',
         icon: 'CgGlobeAlt',
-        title: 'Navigation',
+        titleKey: 'titleNavigation',
         content: {
             type: 'html',
             data: '<form action="https://www.google.com/search" method="get" target="_blank" style="width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center;">\n<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo" style="width:200px; margin-bottom:20px;" />\n<input type="text" name="q" placeholder="Search Google" style="width:80%; padding:10px; font-size:16px;" />\n<button type="submit" style="margin-top:10px; padding:10px 20px; font-size:16px;">Search</button>\n</form>'
         }
     },
-
-
     {
         id: 'rickroll',
         icon: 'CgFolder',
-        title: 'Never Gonna Give You Up',
+        titleKey: 'titleRickroll',
         content: {
             type: 'video',
             data: '/assets/videos/rickvideo.mp4'
@@ -40,7 +39,7 @@ export const windowsConfig = [
     {
         id: 'welovehim',
         icon: 'CgFolder',
-        title: 'We love CA',
+        titleKey: 'titleWeLove',
         content: {
             type: 'video',
             data: '/assets/videos/masterclass.mp4'
@@ -49,71 +48,206 @@ export const windowsConfig = [
     {
         id: 'recap',
         icon: 'CgFolder',
-        title: 'Récapitulatif du dossier d\'affaires',
+        titleKey: 'titleRecap',
         content: {
-            type: 'html',
-            data: '<h2>Récapitulatif du dossier d\'affaires</h2>\n<ul>\n<li><strong>Affaire 1 :</strong> Détails de l\'affaire 1...</li>\n<li><strong>Affaire 2 :</strong> Détails de l\'affaire 2...</li>\n<li><strong>Affaire 3 :</strong> Détails de l\'affaire 3...</li>\n</ul>'
+            type: 'translated',
+            template: 'recap'
         }
     },
     {
         id: 'dossier1',
         icon: 'CgFolder',
-        title: 'Dossier Affaire 1',
+        titleKey: 'titleDossier1',
         content: {
-            type: 'html',
-            data: '<h2>Profil : Marc, 45 ans, en campagne électorale locale.</h2>\n<p><strong>Contexte :</strong> Il veut moderniser son image et prône la transparence totale, mais néglige son hygiène numérique passée.</p>\n<h3>Réalité OSINT :</h3>\n<ul>\n<li><strong>Source :</strong> Twitter (Recherche avancée).<br><strong>Méthode :</strong> Exhumation de tweets racistes ou sexistes vieux de 10 ans.<br><strong>Résultat :</strong> « Cancel culture » immédiate.</li>\n<li><strong>Source :</strong> Ancien blog personnel abandonné (Skyblog ou vieux WordPress).<br><strong>Méthode :</strong> Photos compromettantes de soirées étudiantes ou opinions politiques extrêmes contradictoires avec son programme actuel.</li>\n</ul>'
+            type: 'translated',
+            template: 'dossier1',
+            video: 'https://www.youtube.com/embed/gu0GYwdPfAk'
         }
-    }
-    ,
+    },
     {
-        id: 'dossier1',
+        id: 'dossier2',
         icon: 'CgFolder',
-        title: 'Dossier Affaire 2',
+        titleKey: 'titleDossier2',
         content: {
-            type: 'html',
-            data: '<h2>Profil : Sophie, 35 ans, mère de Léo (8 ans) et Emma (4 ans).</h2>\n<p><strong>Contexte :</strong> Elle utilise Facebook et Instagram pour partager sa vie de famille, persuadée que c\'est \"juste pour les proches\".</p>\n<h3>Réalité OSINT :</h3>\n<ul>\n<li><strong>Source :</strong> Photo de la rentrée des classes sur Facebook.<br><strong>Méthode :</strong> Zoom sur le logo du pull ou l\'architecture de l\'école en arrière-plan + Google Maps.<br><strong>Résultat :</strong> Adresse exacte de l\'école et horaires de sortie trouvés.</li>\n<li><strong>Source :</strong> Photo rigolote du bain ou en maillot l\'été (Instagram).<br><strong>Méthode :</strong> Aspiration par des bots via des hashtags génériques (#bebe, #vacances).<br><strong>Résultat :</strong> Image trouvée sur des forums pédopornographiques (Détournement d\'image).</li>\n<li><strong>Source :</strong> Posts d\'anniversaire (Joyeux 8 ans Léo !\").<br><strong>Méthode :</strong> Recoupement Nom + Prénom + Date de naissance + Ville.<br><strong>Résultat :</strong> Création d\'une empreinte numérique indélébile (risque d\'usurpation d\'identité future ou harcèlement scolaire basé sur des photos gênantes).</li>\n</ul>'
+            type: 'translated',
+            template: 'dossier2',
+            video: 'https://www.youtube.com/embed/77hQGESR4V0'
         }
-    }
-    ,
+    },
     {
-        id: 'dossier1',
+        id: 'dossier3',
         icon: 'CgFolder',
-        title: 'Dossier Affaire 3',
+        titleKey: 'titleDossier3',
         content: {
-            type: 'html',
-            data: '<h2>Profil : Lucas, 17 ans, pseudo \"DarkZ_99\".</h2>\n<p><strong>Contexte :</strong> Il rêve de devenir influenceur/streamer sur Twitch et TikTok. Il veut percer et pense qu\'il doit tout montrer pour fidéliser sa communauté.</p>\n<h3>Réalité OSINT (Ce qui s\'affiche à l\'écran) :</h3>\n<ul>\n<li><strong>Source :</strong> Arrière-plan de la vidéo (TikTok/Twitch).<br><strong>Méthode :</strong> Analyse visuelle : vue par la fenêtre + trajet de bus visible + météo en direct.<br><strong>Résultat :</strong> Géolocalisation précise du domicile (Risque de \"Swatting\" ou cambriolage).</li>\n</ul>'
+            type: 'translated',
+            template: 'dossier3',
+            video: 'https://www.youtube.com/embed/LM7imrwJS5E'
         }
-    }
-    ,
+    },
     {
-        id: 'dossier1',
+        id: 'dossier4',
         icon: 'CgFolder',
-        title: 'Dossier Affaire 4',
+        titleKey: 'titleDossier4',
         content: {
-            type: 'html',
-            data: '<h2>Profil : Julie, 29 ans, Graphiste et Consultante Marketing.</h2>\n<p><strong>Contexte :</strong> Elle gère tout son business en ligne. Inscrite sur des dizaines de plateformes (banques en ligne, outils de gestion, sites de mission), elle privilégie la rapidité et l\'efficacité à la sécurité.</p>\n<h3>Réalité OSINT (Ce qui s\'affiche à l\'écran) :</h3>\n<ul>\n<li><strong>Source :</strong> Violation de données (Data Breach) d\'un vieux site peu sécurisé (ex: un forum ou un petit site e-commerce).<br><strong>Résultat :</strong> Son mot de passe habituel (\"JulieDesign88\") est visible en clair.</li>\n<li><strong>Source :</strong> Attaque par \"Credential Stuffing\" (Bourrage d\'identifiants).<br><strong>Résultat :</strong> Accès à ses comptes pro et bancaires.</li>\n</ul>'
+            type: 'translated',
+            template: 'dossier4',
+            video: 'https://www.youtube.com/embed/V_E0G4MOQ3k'
         }
-    }
-    ,
+    },
     {
         id: 'rapport1',
         icon: 'CgFolder',
-        title: 'Soummettre votre rapport final ?',
+        titleKey: 'titleRapport1',
         content: {
-            type: 'html',
-            data: '<div style=" padding: 20px;">\n    <h1>Êtes-vous prêt à soumettre votre rapport final ?</h1>\n    <p>Commencez uniquement après avoir pris en compte les différentes affaires.</p> <ul><li>Vous avez observer et analysé chaque affaire.</li><li>Vous avez écouté les différents témoignages des victimes.</li><li>Vous avez pris en compte les conseils des experts et des juristes.</li></ul>\n</div>    <div style="text-align: center;"><button onclick="closeWindow(\'rapport1\'); openWindow(windowsConfig[11]);" style="padding: 10px 20px; font-size: 16px; background-color: #ce3639; color: white; border: none; border-radius: 5px; cursor: pointer;">Démarrer le rapport</button>\n</div>'
+            type: 'translated',
+            template: 'rapport1'
         }
-    }
-    ,
+    },
     {
         id: 'rapport2',
         icon: 'CgFolder',
-        title: 'Rapport Final',
+        titleKey: 'titleRapport2',
+        content: {
+            type: 'component',
+            data: 'Quiz',
+        }
+    },
+    {
+        id: 'nassim',
+        icon: 'CgFolder',
+        titleKey: 'titleExpert',
         content: {
             type: 'html',
-            data: '',
+            data: '<iframe width="100%" height="400" src="https://www.youtube.com/embed/Aw1jkyP4EGc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
         }
-    }
-
+    },
+    {
+        id: 'settings',
+        icon: 'CgFolder',
+        titleKey: 'titleSettings',
+        content: {
+            type: 'component',
+            data: 'Settings'
+        }
+    },
+    {
+        id: 'moussier',
+        icon: 'CgFolder',
+        titleKey: 'titleJuriste1',
+        content: {
+            type: 'html',
+            data: '<iframe width="100%" height="400" src="https://www.youtube.com/embed/uiL7evyg__g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        }
+    },
+    {
+        id: 'pascault',
+        icon: 'CgFolder',
+        titleKey: 'titleJuriste2',
+        content: {
+            type: 'html',
+            data: '<iframe width="100%" height="400" src="https://www.youtube.com/embed/uiL7evyg__g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        }
+    },
 
 ];
+
+// Template generators for translated content
+export const getTranslatedContent = (template, t, video = null) => {
+    switch (template) {
+        case 'fonctionnement':
+            return `<h1>${t('fonctionnementTitre')}</h1>
+    <p>${t('fonctionnementBienvenue')}</p>
+    <li>${t('fonctionnementClic')}</li>
+    </ul>
+    <h2>${t('fonctionnementDocsDisponibles')}</h2>
+    <ul>
+        <li><strong>RECAP :</strong> ${t('fonctionnementRecap')}</li>
+        <li><strong>${t('affaire1')} - ${t('affaire4')} :</strong> ${t('fonctionnementDossiers')}</li>
+        <li>${t('fonctionnementTout')}</li>
+    </ul>
+    <h2>${t('fonctionnementConseils')}</h2>
+    <ul>
+        <li>${t('fonctionnementSecurise')}</li>
+        <li>${t('fonctionnementSensibles')}</li>
+    </ul>
+    <h3 style="color: red;">${t('fonctionnementAvertissement')}</h3>`;
+
+        case 'recap':
+            return `<h2>${t('recapTitre')}</h2>
+<p>${t('recapIntro')}</p>
+<h3>${t('recapInstruction')}</h3>
+<ol>
+<li>${t('recapStep1')}</li>
+<li>${t('recapStep2')}</li>
+<li>${t('recapStep3')}</li>
+<li>${t('recapStep4')}</li>
+<li>${t('recapStep5')}</li>
+</ol>
+<h3>${t('affaire1')} - ${t('recapAffaire1Titre')}</h3>
+<p>${t('recapAffaire1Desc')}</p>
+<h3>${t('affaire2')} - ${t('recapAffaire2Titre')}</h3>
+<p>${t('recapAffaire2Desc')}</p>
+<h3>${t('affaire3')} - ${t('recapAffaire3Titre')}</h3>
+<p>${t('recapAffaire3Desc')}</p>
+<h3>${t('affaire4')} - ${t('recapAffaire4Titre')}</h3>
+<p>${t('recapAffaire4Desc')}</p>
+<p style="margin-top: 20px; font-style: italic;">${t('recapConclusion')}</p>`;
+
+        case 'dossier1':
+            return `<h2>${t('marc_profil')}</h2>
+<p><strong>${t('contexte')} :</strong> ${t('marc_contexte')}</p>
+<h3>${t('marc_realite')}</h3>
+<ul>
+<li><strong>${t('source')} :</strong> ${t('marc_source1')}<br><strong>${t('methode')} :</strong> ${t('marc_methode1')}<br><strong>${t('resultat')} :</strong> ${t('marc_resultat1')}</li>
+<li><strong>${t('source')} :</strong> ${t('marc_source2')}<br><strong>${t('methode')} :</strong> ${t('marc_methode2')}</li>
+</ul>
+<div style="margin-top: 20px;"><iframe width="100%" height="315" src="${video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+
+        case 'dossier2':
+            return `<h2>${t('sophie_profil')}</h2>
+<p><strong>${t('contexte')} :</strong> ${t('sophie_contexte')}</p>
+<h3>${t('sophie_realite')}</h3>
+<ul>
+<li><strong>${t('source')} :</strong> ${t('sophie_source1')}<br><strong>${t('methode')} :</strong> ${t('sophie_methode1')}<br><strong>${t('resultat')} :</strong> ${t('sophie_resultat1')}</li>
+<li><strong>${t('source')} :</strong> ${t('sophie_source2')}<br><strong>${t('methode')} :</strong> ${t('sophie_methode2')}<br><strong>${t('resultat')} :</strong> ${t('sophie_resultat2')}</li>
+<li><strong>${t('source')} :</strong> ${t('sophie_source3')}<br><strong>${t('methode')} :</strong> ${t('sophie_methode3')}<br><strong>${t('resultat')} :</strong> ${t('sophie_resultat3')}</li>
+</ul>
+<div style="margin-top: 20px;"><iframe width="100%" height="315" src="${video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+
+        case 'dossier3':
+            return `<h2>${t('lucas_profil')}</h2>
+<p><strong>${t('contexte')} :</strong> ${t('lucas_contexte')}</p>
+<h3>${t('lucas_realite')}</h3>
+<ul>
+<li><strong>${t('source')} :</strong> ${t('lucas_source1')}<br><strong>${t('methode')} :</strong> ${t('lucas_methode1')}<br><strong>${t('resultat')} :</strong> ${t('lucas_resultat1')}</li>
+</ul>
+<div style="margin-top: 20px;"><iframe width="100%" height="315" src="${video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+
+        case 'dossier4':
+            return `<h2>${t('julie_profil')}</h2>
+<p><strong>${t('contexte')} :</strong> ${t('julie_contexte')}</p>
+<h3>${t('julie_realite')}</h3>
+<ul>
+<li><strong>${t('source')} :</strong> ${t('julie_source1')}<br><strong>${t('resultat')} :</strong> ${t('julie_resultat1')}</li>
+<li><strong>${t('source')} :</strong> ${t('julie_source2')}<br><strong>${t('resultat')} :</strong> ${t('julie_resultat2')}</li>
+</ul>
+<div style="margin-top: 20px;"><iframe width="100%" height="315" src="${video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+
+        case 'rapport1':
+            return `<div style="padding: 20px;">
+    <h1>${t('rapport_question')}</h1>
+    <p>${t('rapport_instruction')}</p>
+    <ul>
+        <li>${t('rapport_check1')}</li>
+        <li>${t('rapport_check2')}</li>
+        <li>${t('rapport_check3')}</li>
+    </ul>
+</div>
+<div style="text-align: center;">
+    <button onclick="closeWindow('rapport1'); openWindow(windowsConfig[11]);" style="padding: 10px 20px; font-size: 16px; background-color: #ce3639; color: white; border: none; border-radius: 5px; cursor: pointer;">${t('rapport_demarrer')}</button>
+</div>`;
+
+        default:
+            return '';
+    }
+};

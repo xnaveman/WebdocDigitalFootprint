@@ -13,8 +13,10 @@ import Taskbar from './elements/Taskbar.jsx'
 import Shortcut from './elements/Shortcut.jsx'
 import Window from './elements/Window.jsx'
 import { windowsConfig } from './windowsConfig.js'
+import { useLanguage } from './contexts/LanguageContext'
 
 function App() {
+  const { t } = useLanguage();
   const [windows, setWindows] = useState([
     { ...windowsConfig.find(win => win.id === 'folder'), instanceId: Date.now() }
   ]);
@@ -42,29 +44,23 @@ function App() {
       <div className="desktop">
         <div className="shortcuts">
 
-          <Shortcut icon={binIcon} label="Corbeille" />
-          <Shortcut icon={settingsIcon} label="Paramètres" />
+          <Shortcut icon={binIcon} label={t('corbeille')} />
+          <Shortcut icon={settingsIcon} label={t('parametres')} onDoubleClick={() => openWindow(windowsConfig[13])} />
 
-          <Shortcut icon={docIcon} label="RÉCAP.txt" onDoubleClick={() => openWindow(windowsConfig[5])} />
+          <Shortcut icon={docIcon} label={t('recap')} onDoubleClick={() => openWindow(windowsConfig[5])} />
 
-          <Shortcut icon={folderIcon} label="Affaire 1" onDoubleClick={() => openWindow(windowsConfig[6])} />
-          <Shortcut icon={folderIcon} label="Affaire 2" onDoubleClick={() => openWindow(windowsConfig[7])} />
-          <Shortcut icon={folderIcon} label="Affaire 3" onDoubleClick={() => openWindow(windowsConfig[8])} />
-          <Shortcut icon={folderIcon} label="Affaire 4" onDoubleClick={() => openWindow(windowsConfig[9])} />
+          <Shortcut icon={folderIcon} label={t('affaire1')} onDoubleClick={() => openWindow(windowsConfig[6])} />
+          <Shortcut icon={folderIcon} label={t('affaire2')} onDoubleClick={() => openWindow(windowsConfig[7])} />
+          <Shortcut icon={folderIcon} label={t('affaire3')} onDoubleClick={() => openWindow(windowsConfig[8])} />
+          <Shortcut icon={folderIcon} label={t('affaire4')} onDoubleClick={() => openWindow(windowsConfig[9])} />
 
-          <Shortcut icon={videoIcon} label="JURISTE1.mp4" onDoubleClick={() => openWindow(windowsConfig[3])} />
-          <Shortcut icon={docIcon} label="Transcription1.txt" />
+          <Shortcut icon={videoIcon} label={t('juriste1')} onDoubleClick={() => openWindow(windowsConfig[14])} />
 
-          <Shortcut icon={videoIcon} label="JURISTE2.mp4" onDoubleClick={() => openWindow(windowsConfig[3])} />
-          <Shortcut icon={docIcon} label="Transcription2.txt" />
+          <Shortcut icon={videoIcon} label={t('juriste2')} onDoubleClick={() => openWindow(windowsConfig[15])} />
 
-          <Shortcut icon={videoIcon} label="BOUICHE.mp4" onDoubleClick={() => openWindow(windowsConfig[3])} />
-          <Shortcut icon={docIcon} label="Transcription3.txt" />
+          <Shortcut icon={videoIcon} label={t('expertCyber')} onDoubleClick={() => openWindow(windowsConfig[12])} />
 
-          <Shortcut icon={videoIcon} label="Rick ?" onDoubleClick={() => openWindow(windowsConfig[3])} />
-
-
-          <Shortcut icon={submitIcon} label="RAPPORT" onDoubleClick={() => openWindow(windowsConfig[10])} />
+          <Shortcut icon={submitIcon} label={t('rapport')} onDoubleClick={() => openWindow(windowsConfig[10])} />
 
 
         </div>
