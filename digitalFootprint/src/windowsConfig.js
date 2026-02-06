@@ -140,7 +140,7 @@ export const windowsConfig = [
         }
     },
     {
-        id: 'pascault',
+        id: 'pasco',
         icon: 'CgFolder',
         titleKey: 'titleJuriste2',
         content: {
@@ -149,7 +149,7 @@ export const windowsConfig = [
         }
     },
     {
-        id: 'pascault2',
+        id: 'pasco2',
         icon: 'CgFolder',
         titleKey: 'titleJuriste2Part2',
         content: {
