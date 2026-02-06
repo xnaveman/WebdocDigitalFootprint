@@ -201,7 +201,7 @@ export const getTranslatedContent = (template, t, video = null) => {
 <li><strong>${t('source')} :</strong> ${t('marc_source1')}<br><strong>${t('methode')} :</strong> ${t('marc_methode1')}<br><strong>${t('resultat')} :</strong> ${t('marc_resultat1')}</li>
 <li><strong>${t('source')} :</strong> ${t('marc_source2')}<br><strong>${t('methode')} :</strong> ${t('marc_methode2')}</li>
 </ul>
-<div style="margin-top: 20px;"><iframe width="100%" height="315" src="${video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+<div style="margin-top: 20px;"><iframe width="100%" height="400" src="${video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
 
         case 'dossier2':
             return `<h2>${t('sophie_profil')}</h2>
@@ -212,7 +212,7 @@ export const getTranslatedContent = (template, t, video = null) => {
 <li><strong>${t('source')} :</strong> ${t('sophie_source2')}<br><strong>${t('methode')} :</strong> ${t('sophie_methode2')}<br><strong>${t('resultat')} :</strong> ${t('sophie_resultat2')}</li>
 <li><strong>${t('source')} :</strong> ${t('sophie_source3')}<br><strong>${t('methode')} :</strong> ${t('sophie_methode3')}<br><strong>${t('resultat')} :</strong> ${t('sophie_resultat3')}</li>
 </ul>
-<div style="margin-top: 20px;"><iframe width="100%" height="315" src="${video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+<div style="margin-top: 20px;"><iframe width="100%" height="400" src="${video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
 
         case 'dossier3':
             return `<h2>${t('lucas_profil')}</h2>
@@ -221,7 +221,7 @@ export const getTranslatedContent = (template, t, video = null) => {
 <ul>
 <li><strong>${t('source')} :</strong> ${t('lucas_source1')}<br><strong>${t('methode')} :</strong> ${t('lucas_methode1')}<br><strong>${t('resultat')} :</strong> ${t('lucas_resultat1')}</li>
 </ul>
-<div style="margin-top: 20px;"><iframe width="100%" height="315" src="${video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+<div style="margin-top: 20px;"><iframe width="100%" height="400" src="${video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
 
         case 'dossier4':
             return `<h2>${t('julie_profil')}</h2>
@@ -231,7 +231,7 @@ export const getTranslatedContent = (template, t, video = null) => {
 <li><strong>${t('source')} :</strong> ${t('julie_source1')}<br><strong>${t('resultat')} :</strong> ${t('julie_resultat1')}</li>
 <li><strong>${t('source')} :</strong> ${t('julie_source2')}<br><strong>${t('resultat')} :</strong> ${t('julie_resultat2')}</li>
 </ul>
-<div style="margin-top: 20px;"><iframe width="100%" height="315" src="${video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+<div style="margin-top: 20px;"><iframe width="100%" height="400" src="${video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
 
         case 'rapport1':
             return `<div style="padding: 20px;">

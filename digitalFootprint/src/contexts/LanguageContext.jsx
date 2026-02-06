@@ -77,7 +77,7 @@ export const translations = {
         recapBouton: 'Commencer l\'investigation',
 
         // Dossier 1 - Marc
-        marc_profil: 'Profil : Marc Durand, 45 ans, candidat aux élections municipales',
+        marc_profil: 'Profil : Marc, 45 ans, candidat aux élections municipales',
         marc_contexte: 'Marc se lance dans la politique locale avec un programme axé sur la transparence et la modernisation. Ancien cadre dans le secteur privé, il souhaite apporter un nouveau souffle à sa commune. Il a créé ses premiers comptes sur les réseaux sociaux il y a 15 ans, sans se préoccuper de sa vie numérique passée.',
         marc_realite: 'Découvertes OSINT :',
         marc_source1: 'Twitter / X (Recherche avancée avec filtres temporels)',
@@ -88,7 +88,7 @@ export const translations = {
         marc_resultat2: 'Récupération de photos de soirées étudiantes dans des contextes embarrassants et d\'articles exprimant des opinions politiques radicales opposées à son programme actuel. Ces éléments compromettent gravement sa crédibilité auprès des électeurs.',
 
         // Dossier 2 - Sophie
-        sophie_profil: 'Profil : Sophie Martin, 35 ans, mère de Léo (8 ans) et Emma (4 ans)',
+        sophie_profil: 'Profil : Sophie, 35 ans, mère de Léo (8 ans) et Emma (4 ans)',
         sophie_contexte: 'Sophie est une mère de famille active sur les réseaux sociaux. Elle partage quotidiennement des moments de vie avec ses enfants sur Facebook et Instagram, pensant que ses paramètres de confidentialité la protègent et que seuls ses "amis" peuvent voir ses publications. Elle utilise les réseaux depuis 2012 et compte plus de 450 amis sur Facebook.',
         sophie_realite: 'Découvertes OSINT :',
         sophie_source1: 'Photo de rentrée scolaire publiée sur Facebook (septembre 2023)',
@@ -116,7 +116,7 @@ export const translations = {
         lucas_resultat3: 'Récupération d\'informations supplémentaires sur son environnement et ses déplacements, renforçant le profilage complet de sa vie privée.',
 
         // Dossier 4 - Julie
-        julie_profil: 'Profil : Julie Mercier, 29 ans, Graphiste Freelance et Consultante Marketing Digital',
+        julie_profil: 'Profil : Julie, 29 ans, Graphiste Freelance et Consultante Marketing Digital',
         julie_contexte: 'Julie travaille exclusivement en ligne depuis 2018. Elle jongle entre 34 plateformes différentes : Malt, Fiverr, Upwork pour ses missions, Stripe et PayPal pour les paiements, Boursorama et N26 pour ses comptes bancaires professionnels, Notion et Trello pour la gestion de projets, sans oublier les réseaux sociaux professionnels (LinkedIn, Behance, Dribbble). Par souci de rapidité, elle utilise le même mot de passe sur la majorité de ses comptes, avec de légères variations.',
         julie_realite: 'Découvertes OSINT :',
         julie_source1: 'Base de données de violation HaveIBeenPwned et forums du dark web',
@@ -259,7 +259,7 @@ export const translations = {
         recapBouton: 'Start the investigation',
 
         // Dossier 1 - Marc
-        marc_profil: 'Profile: Marc Durand, 45 years old, candidate for municipal elections',
+        marc_profil: 'Profile: Marc, 45 years old, candidate for municipal elections',
         marc_contexte: 'Marc is launching his local political career with a platform focused on transparency and modernization. A former executive in the private sector, he wants to bring fresh ideas to his town. He created his first social media accounts 15 years ago without worrying about his past digital life.',
         marc_realite: 'OSINT Findings:',
         marc_source1: 'Twitter / X (Advanced search with temporal filters)',
@@ -270,7 +270,7 @@ export const translations = {
         marc_resultat2: 'Recovery of photos from student parties in embarrassing contexts and articles expressing radical political opinions opposed to his current platform. These elements seriously compromise his credibility with voters.',
 
         // Dossier 2 - Sophie
-        sophie_profil: 'Profile: Sophie Martin, 35 years old, mother of Léo (8) and Emma (4)',
+        sophie_profil: 'Profile: Sophie, 35 years old, mother of Léo (8) and Emma (4)',
         sophie_contexte: 'Sophie is an active mother on social media. She shares daily moments with her children on Facebook and Instagram, thinking her privacy settings protect her and only her "friends" can see her posts. She has been using social networks since 2012 and has over 450 friends on Facebook.',
         sophie_realite: 'OSINT Findings:',
         sophie_source1: 'Back-to-school photo posted on Facebook (September 2023)',
@@ -298,7 +298,7 @@ export const translations = {
         lucas_resultat3: 'Recovery of additional information about his environment and movements, reinforcing complete profiling of his private life.',
 
         // Dossier 4 - Julie
-        julie_profil: 'Profile: Julie Mercier, 29 years old, Freelance Graphic Designer and Digital Marketing Consultant',
+        julie_profil: 'Profile: Julie, 29 years old, Freelance Graphic Designer and Digital Marketing Consultant',
         julie_contexte: 'Julie has been working exclusively online since 2018. She juggles between 34 different platforms: Malt, Fiverr, Upwork for her gigs, Stripe and PayPal for payments, Boursorama and N26 for her professional bank accounts, Notion and Trello for project management, not to mention professional social networks (LinkedIn, Behance, Dribbble). For speed, she uses the same password on most of her accounts, with slight variations.',
         julie_realite: 'OSINT Findings:',
         julie_source1: 'HaveIBeenPwned breach database and dark web forums',
